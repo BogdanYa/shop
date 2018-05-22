@@ -1,5 +1,31 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
-    <h3>Test123</h3>
+    <div class="section-top">
+        <img src="{% static 'img/picture.jpg' %}" class="img-responsive">
+    </div>
+    <div class ="section">
+        <div class="top-container>">
+            <div class="row">
+                {% for product in products %}
+                    <div class="col-lg-3">
+                        <div class="product-item">
+                            <div>
+                                <img src="/" class="image-responsive">
+                            </div>
+                            <h4>{{ product.name }}</h4>
+                            <p>
+                                {{ product.description|truncatechars_html:100}}
+                            </p>
+                            <div class="add-to-cart-btn">
+                                <button class="btn btn-success">
+                                    Добавить в корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 {% endblock content %}
