@@ -79,7 +79,21 @@ html, body{
     width: 230px;
     margin-left: 15px;
 }
+.navbar-main{
+    background-color: #b3b2b2;
+}
 
-.btn{
-    margin-top: 10px;
+.basket-container{
+    position: relative;
+    width: 400px;
+    padding: 15px 10px;
+}
+
+.basket-items{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    z-index: 10;
+    padding: 10px;
+    background-color: #CBCBCB;
 }
