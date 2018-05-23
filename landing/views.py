@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import SubscriberForm
-from products.models import Product
+from products.models import *
+
 
 def landing(request):
     form = SubscriberForm(request.POST or None)
@@ -17,5 +18,5 @@ def landing(request):
 
 
 def home(request):
-    products = Product.objects.filter(is_active=True)
+    products_images = ProductImage.objects.filter(is_main=True, is_active=True)
     return render(request, 'landing/home.html', locals())
