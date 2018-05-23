@@ -5,22 +5,22 @@ html, body{
     background-color: #edeef0;
 }
 
-.section-top{
-    margin:20px;
 
+.section-top{
+    margin: 20px
 }
+
 .product-item{
-    height: 220px;
-    background-color: whitesmoke;
+    height: 215px;
+    background-color: white;
     border: 1px solid lightgrey;
     position: relative;
-    margin-left: 80px;
     padding: 5px;
     text-align: center;
 }
 
-.add-to-cart-btn{
+.add-to-card-btn{
     position: absolute;
-    bottom: 10px;
-    left: 60px;
+    bottom: 15px;
+    left: 50px;
 }
