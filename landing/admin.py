@@ -17,7 +17,9 @@ class SubscriberAdmin (admin.ModelAdmin):
 	# #list_filter = ('report_data',)
 	# search_fields = ['category', 'subCategory', 'suggestKeyword']
 
+
     class Meta:
         model = Subscriber
+
 
 admin.site.register(Subscriber, SubscriberAdmin)

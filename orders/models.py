@@ -18,6 +18,7 @@ class Status(models.Model):
 
 
 class Order(models.Model):
+    #user = models.ForeignKey(User, blank=True, default=False, on_delete=models.CASCADE)
     total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)#total price for all products in order
     customer_name = models.CharField(max_length=64, blank=True, null=True, default=None)
     customer_email = models.EmailField(blank=True, null=True, default=None)
