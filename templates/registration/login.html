@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Вход{% endblock %}
+
+
+{% block content %}
+  <h2 style="margin-left: 450px;">Для входа введите логин и пароль</h2>
+   <div class="login_form" style="margin-left: 500px;">
+        <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-success" type="submit" style="margin-left: 100px">Войти</button>
+            console.log
+      </form>
+   </div>
+
+{% endblock %}

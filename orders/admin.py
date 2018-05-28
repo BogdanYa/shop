@@ -43,4 +43,5 @@ class ProductInBasketAdmin (admin.ModelAdmin):
     class Meta:
         model = ProductInBasket
 
+
 admin.site.register(ProductInBasket, ProductInBasketAdmin)

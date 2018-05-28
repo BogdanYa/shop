@@ -1,3 +1,9 @@
+function csrf_getting_form(){
+    var data = {};
+    var csrf_token = $('#csrf_getting_form [name="csrfmiddlewaretoken"]').val();
+   data["csrfmiddlewaretoken"] = csrf_token;
+}
+
 $(document).ready(function () {
     var form = $('#form_buying_product');
     console.log(form);
@@ -72,7 +78,6 @@ $(document).ready(function () {
     // $('.basket-container').mouseout(function (e) {
     //      shovingBasket();
     // });
-
     $(document).on('click', '.delete-item', function(e){
         e.preventDefault();
         product_id = $(this).data("product_id")
