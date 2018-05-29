@@ -31,7 +31,7 @@ def basket_adding(request):
 
     return_dict["products"] = list()
 
-    for item in  products_in_basket:
+    for item in products_in_basket:
         product_dict = dict()
         product_dict["id"] = item.id
         product_dict["name"] = item.product.name
@@ -75,7 +75,7 @@ def checkout(request):
                                                   total_price = product_in_basket.total_price,
                                                   order=order)
 
-            return HttpResponseRedirect(request.META['HTTP_REFERER'])
+            return HttpResponseRedirect('http://localhost:8000/')
         else:
             print("no")
     return render(request, 'orders/checkout.html', locals())
